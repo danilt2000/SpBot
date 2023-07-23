@@ -1,6 +1,6 @@
 const mineflayer = require('mineflayer')
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
-const autoeat = require('mineflayer-auto-eat')
+// const autoeat = require('mineflayer-auto-eat')
 const pvp = require('mineflayer-pvp').plugin
 
 const bot = mineflayer.createBot({
@@ -11,7 +11,7 @@ const bot = mineflayer.createBot({
 
 bot.loadPlugin(pvp);
 bot.loadPlugin(pathfinder)
-bot.loadPlugin(autoeat)
+// bot.loadPlugin(autoeat)
 
 
 bot.on('chat', (username, message) => {
@@ -40,13 +40,13 @@ bot.on('chat', (username, message) => {
 })
 // Load the plugin
 
-bot.once('spawn', () => {
-  bot.autoEat.options = {
-    priority: 'foodPoints',
-    startAt: 14,
-    bannedFood: []
-  }
-})
+// bot.once('spawn', () => {
+//   bot.autoEat.options = {
+//     priority: 'foodPoints',
+//     startAt: 14,
+//     bannedFood: []
+//   }
+// })
 // The bot eats food automatically and emits these events when it starts eating and stops eating.
 
 // bot.on('autoeat_started', () => {
